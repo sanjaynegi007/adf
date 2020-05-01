@@ -1,0 +1,36 @@
+{
+	"name": "DS_20190211_Blob_Target_File",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_20190211_Blob_Source",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TargetDataSetFileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().TargetDataSetFileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat(formatDateTime(utcnow(),'yyyy'),'-',formatDateTime(utcnow(),'MM'))",
+					"type": "Expression"
+				},
+				"container": "target"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

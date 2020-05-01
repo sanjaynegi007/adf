@@ -1,0 +1,25 @@
+{
+	"name": "TRG_ScheduledWait",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_Wait",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2019-11-02T16:22:00Z",
+				"endTime": "2019-11-04T16:22:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

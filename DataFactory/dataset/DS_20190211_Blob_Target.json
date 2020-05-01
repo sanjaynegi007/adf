@@ -1,0 +1,27 @@
+{
+	"name": "DS_20190211_Blob_Target",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_20190211_Blob_Source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@concat(formatDateTime(utcnow(),'yyyy'),'-',formatDateTime(utcnow(),'MM'))",
+					"type": "Expression"
+				},
+				"container": "target"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,6 @@
+{
+	"name": "LocalMachineIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

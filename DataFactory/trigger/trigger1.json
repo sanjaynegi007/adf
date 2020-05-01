@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_IncrementalCopy",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/orders/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/b55af1fd-af26-4506-a55a-3ce47e283afc/resourceGroups/demo_adf/providers/Microsoft.Storage/storageAccounts/demosa127",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "FileTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_CopyOrders",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"FileName": "@triggerBody().fileName"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/orders/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/b55af1fd-af26-4506-a55a-3ce47e283afc/resourceGroups/demo_adf/providers/Microsoft.Storage/storageAccounts/demosa127",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

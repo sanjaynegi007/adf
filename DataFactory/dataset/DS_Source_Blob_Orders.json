@@ -1,0 +1,47 @@
+{
+	"name": "DS_Source_Blob_Orders",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_demoss127",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "File Copy"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "OrderProcessing.txt",
+					"type": "Expression"
+				},
+				"container": "orders"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "OrderId",
+				"type": "String"
+			},
+			{
+				"name": "OrderDate",
+				"type": "String"
+			},
+			{
+				"name": "OrderQuantity",
+				"type": "String"
+			},
+			{
+				"name": "OrderUnitPrice",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

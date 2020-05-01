@@ -1,0 +1,26 @@
+{
+	"name": "DS_Target_Blob_Orders",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Target_Blob_orders",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "File Copy"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "target"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
