@@ -2,7 +2,7 @@
 	"name": "TRG_ScheduledWait",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
